@@ -2,10 +2,10 @@
 -- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Aug 26, 2013 at 09:31 PM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.16
+-- Servidor: localhost
+-- Tiempo de generación: 27-08-2013 a las 00:34:56
+-- Versión del servidor: 5.6.12-log
+-- Versión de PHP: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `bloggalaxy`
+-- Base de datos: `bloggalaxy`
 --
 CREATE DATABASE IF NOT EXISTS `bloggalaxy` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `bloggalaxy`;
@@ -25,7 +25,7 @@ USE `bloggalaxy`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_commentmeta`
+-- Estructura de tabla para la tabla `wp_commentmeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_comments`
+-- Estructura de tabla para la tabla `wp_comments`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_comments` (
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `wp_comments`
+-- Volcado de datos para la tabla `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_links`
+-- Estructura de tabla para la tabla `wp_links`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_links` (
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_options`
+-- Estructura de tabla para la tabla `wp_options`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_options` (
@@ -111,15 +111,15 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=170 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=193 ;
 
 --
--- Dumping data for table `wp_options`
+-- Volcado de datos para la tabla `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
 (1, 'siteurl', 'http://localhost/blog', 'yes'),
-(2, 'blogname', 'blog desarrollos galaxy', 'yes'),
+(2, 'blogname', 'Desarrollos Galaxy blog', 'yes'),
 (3, 'blogdescription', 'Otro sitio realizado con WordPress', 'yes'),
 (4, 'users_can_register', '0', 'yes'),
 (5, 'admin_email', 'desarrollosgalaxy@gmail.com', 'yes'),
@@ -129,7 +129,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (9, 'require_name_email', '1', 'yes'),
 (10, 'comments_notify', '1', 'yes'),
 (11, 'posts_per_rss', '10', 'yes'),
-(12, 'rss_use_excerpt', '0', 'yes'),
+(12, 'rss_use_excerpt', '1', 'yes'),
 (13, 'mailserver_url', 'mail.example.com', 'yes'),
 (14, 'mailserver_login', 'login@example.com', 'yes'),
 (15, 'mailserver_pass', 'password', 'yes'),
@@ -160,7 +160,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (40, 'comment_max_links', '2', 'yes'),
 (41, 'gmt_offset', '0', 'yes'),
 (42, 'default_email_category', '1', 'yes'),
-(43, 'recently_edited', 'a:2:{i:0;s:51:"C:\\wamp\\www\\blog/wp-content/themes/gridly/style.css";i:1;s:0:"";}', 'no'),
+(43, 'recently_edited', 'a:3:{i:0;s:51:"E:\\wamp\\www\\blog/wp-content/themes/gridly/style.css";i:1;s:51:"C:\\wamp\\www\\blog/wp-content/themes/gridly/style.css";i:2;s:0:"";}', 'no'),
 (44, 'template', 'gridly', 'yes'),
 (45, 'stylesheet', 'gridly', 'yes'),
 (46, 'comment_whitelist', '1', 'yes'),
@@ -216,11 +216,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (96, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (97, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
 (98, 'sidebars_widgets', 'a:3:{s:19:"wp_inactive_widgets";a:0:{}s:13:"gridly_footer";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:13:"array_version";i:3;}', 'yes'),
-(99, 'cron', 'a:6:{i:1377555248;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"adcb9b75260590ff6058773ddcb9ddd6";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:4;}}}}i:1377591164;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1377591165;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1377634393;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1377638539;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(101, '_transient_random_seed', 'bc9a45071ea3c597e29d3787efc5c6a7', 'yes'),
+(99, 'cron', 'a:5:{i:1377591164;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1377591165;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1377634393;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1377638539;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(101, '_transient_random_seed', '5d9613f932e2b31e18a95f4217200a3f', 'yes'),
 (102, 'logged_in_key', 'z1YYF8Vu4OIul4%wk/}0sZl_-_P]|9{i{BAOd0wY4%q{8#(r8BxZPS2rITwNy:4z', 'yes'),
 (103, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:2:{i:0;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:47:"http://es.wordpress.org/wordpress-3.6-es_ES.zip";s:6:"locale";s:5:"es_ES";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:47:"http://es.wordpress.org/wordpress-3.6-es_ES.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;}s:7:"current";s:3:"3.6";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.6";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":9:{s:8:"response";s:6:"latest";s:8:"download";s:38:"http://wordpress.org/wordpress-3.6.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":4:{s:4:"full";s:38:"http://wordpress.org/wordpress-3.6.zip";s:10:"no_content";s:49:"http://wordpress.org/wordpress-3.6-no-content.zip";s:11:"new_bundled";s:50:"http://wordpress.org/wordpress-3.6-new-bundled.zip";s:7:"partial";b:0;}s:7:"current";s:3:"3.6";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.6";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1377547978;s:15:"version_checked";s:3:"3.6";}', 'yes'),
-(104, '_site_transient_update_plugins', 'O:8:"stdClass":3:{s:12:"last_checked";i:1377547978;s:7:"checked";a:2:{s:19:"akismet/akismet.php";s:5:"2.5.9";s:9:"hello.php";s:3:"1.6";}s:8:"response";a:0:{}}', 'yes'),
+(104, '_site_transient_update_plugins', 'O:8:"stdClass":2:{s:12:"last_checked";i:1377561801;s:8:"response";a:0:{}}', 'yes'),
 (108, '_site_transient_timeout_browser_061ead074d61b8b433d8903014ad7d22', '1378152781', 'yes'),
 (109, '_site_transient_browser_061ead074d61b8b433d8903014ad7d22', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"29.0.1547.57";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (110, 'dashboard_widget_options', 'a:4:{s:25:"dashboard_recent_comments";a:1:{s:5:"items";i:5;}s:24:"dashboard_incoming_links";a:5:{s:4:"home";s:21:"http://localhost/blog";s:4:"link";s:97:"http://blogsearch.google.com/blogsearch?scoring=d&partner=wordpress&q=link:http://localhost/blog/";s:3:"url";s:130:"http://blogsearch.google.com/blogsearch_feeds?scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:http://localhost/blog/";s:5:"items";i:10;s:9:"show_date";b:0;}s:17:"dashboard_primary";a:7:{s:4:"link";s:26:"http://wordpress.org/news/";s:3:"url";s:31:"http://wordpress.org/news/feed/";s:5:"title";s:22:"Blog oficial WordPress";s:5:"items";i:2;s:12:"show_summary";i:1;s:11:"show_author";i:0;s:9:"show_date";i:1;}s:19:"dashboard_secondary";a:7:{s:4:"link";s:28:"http://planet.wordpress.org/";s:3:"url";s:33:"http://planet.wordpress.org/feed/";s:5:"title";s:30:"Otras noticias sobre WordPress";s:5:"items";i:5;s:12:"show_summary";i:0;s:11:"show_author";i:0;s:9:"show_date";i:0;}}', 'yes'),
@@ -247,12 +247,12 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (128, '_transient_timeout_feed_mod_77fa140e07ce53fe8c87136636f83d72', '1377591191', 'no'),
 (129, '_transient_feed_mod_77fa140e07ce53fe8c87136636f83d72', '1377547991', 'no'),
 (130, '_transient_timeout_dash_4077549d03da2e451c8b5f002294ff51', '1377591191', 'no'),
-(131, '_transient_timeout_plugin_slugs', '1377635565', 'no'),
+(131, '_transient_timeout_plugin_slugs', '1377648201', 'no'),
 (132, '_transient_dash_4077549d03da2e451c8b5f002294ff51', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wordpress.org/news/2013/08/oscar/'' title=''The latest and greatest WordPress, version 3.6, is now live to the world and includes a beautiful new blog-centric theme, bullet-proof autosave and post locking, a revamped revision browser, native support for audio and video embeds, and improved integrations with Spotify, Rdio, and SoundCloud. Here’s a video that shows off some of the features using […]''>WordPress 3.6 “Oscar”</a> <span class="rss-date">1 agosto, 2013</span><div class=''rssSummary''>The latest and greatest WordPress, version 3.6, is now live to the world and includes a beautiful new blog-centric theme, bullet-proof autosave and post locking, a revamped revision browser, native support for audio and video embeds, and improved integrations with Spotify, Rdio, and SoundCloud. Here’s a video that shows off some of the features using […]</div></li><li><a class=''rsswidget'' href=''http://wordpress.org/news/2013/07/wordpress-3-6-release-candidate-2/'' title=''The second release candidate for WordPress 3.6 is now available for download and testing. We’re down to only a few remaining issues, and the final release should be available in a matter of days. In RC2, we’ve tightened up some aspects of revisions, autosave, and the media player, and fixed some bugs that were spotted […]''>WordPress 3.6 Release Candidate 2</a> <span class="rss-date">24 julio, 2013</span><div class=''rssSummary''>The second release candidate for WordPress 3.6 is now available for download and testing. We’re down to only a few remaining issues, and the final release should be available in a matter of days. In RC2, we’ve tightened up some aspects of revisions, autosave, and the media player, and fixed some bugs that were spotted […]</div></li></ul></div>', 'no'),
 (133, '_transient_plugin_slugs', 'a:2:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";}', 'no'),
 (134, '_transient_timeout_dash_de3249c4736ad3bd2cd29147c4a0d43e', '1377591191', 'no'),
 (135, '_transient_dash_de3249c4736ad3bd2cd29147c4a0d43e', '<h4>Más populares</h4>\n<h5><a href=''http://wordpress.org/plugins/contact-form-plugin/''>Contact Form</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=contact-form-plugin&amp;_wpnonce=7b9ec2b4f3&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Contact Form''>Instalar</a>)</span>\n<p>Add Contact Form to your WordPress website.</p>\n<h4>Plugins recientes</h4>\n<h5><a href=''http://wordpress.org/plugins/shy-posts/''>Shy Posts</a></h5>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=shy-posts&amp;_wpnonce=50f8f077b1&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Shy Posts''>Instalar</a>)</span>\n<p>Provides a checkbox on a post admin page to allow you to say that THIS post should not appear on the homepage blog loop.</p>\n', 'no'),
-(136, '_site_transient_timeout_wporg_theme_feature_list', '1377562870', 'yes'),
+(136, '_site_transient_timeout_wporg_theme_feature_list', '1377572473', 'yes'),
 (137, '_site_transient_wporg_theme_feature_list', 'a:5:{s:6:"Colors";a:15:{i:0;s:5:"black";i:1;s:4:"blue";i:2;s:5:"brown";i:3;s:4:"gray";i:4;s:5:"green";i:5;s:6:"orange";i:6;s:4:"pink";i:7;s:6:"purple";i:8;s:3:"red";i:9;s:6:"silver";i:10;s:3:"tan";i:11;s:5:"white";i:12;s:6:"yellow";i:13;s:4:"dark";i:14;s:5:"light";}s:7:"Columns";a:6:{i:0;s:10:"one-column";i:1;s:11:"two-columns";i:2;s:13:"three-columns";i:3;s:12:"four-columns";i:4;s:12:"left-sidebar";i:5;s:13:"right-sidebar";}s:5:"Width";a:2:{i:0;s:11:"fixed-width";i:1;s:14:"flexible-width";}s:8:"Features";a:19:{i:0;s:8:"blavatar";i:1;s:10:"buddypress";i:2;s:17:"custom-background";i:3;s:13:"custom-colors";i:4;s:13:"custom-header";i:5;s:11:"custom-menu";i:6;s:12:"editor-style";i:7;s:21:"featured-image-header";i:8;s:15:"featured-images";i:9;s:15:"flexible-header";i:10;s:20:"front-page-post-form";i:11;s:19:"full-width-template";i:12;s:12:"microformats";i:13;s:12:"post-formats";i:14;s:20:"rtl-language-support";i:15;s:11:"sticky-post";i:16;s:13:"theme-options";i:17;s:17:"threaded-comments";i:18;s:17:"translation-ready";}s:7:"Subject";a:3:{i:0;s:7:"holiday";i:1;s:13:"photoblogging";i:2;s:8:"seasonal";}}', 'yes'),
 (138, '_transient_timeout_feed_867bd5c64f85878d03a060509cd2f92c', '1377591195', 'no');
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -262,7 +262,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (141, '_transient_feed_mod_867bd5c64f85878d03a060509cd2f92c', '1377547995', 'no'),
 (142, '_transient_timeout_dash_aa95765b5cc111c56d5993d476b1c2f0', '1377591195', 'no'),
 (143, '_transient_dash_aa95765b5cc111c56d5993d476b1c2f0', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wordpress.tv/2013/08/26/al-davis-after-the-install-3/'' title=''     ''>WordPress.tv: Al Davis: After the Install</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2013/08/26/brewster-kahle-internet-archive-and-preserving-wordpress-blogs/'' title=''     ''>WordPress.tv: Brewster Kahle: Internet Archive and Preserving WordPress Blogs</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2013/08/25/aleksandr-stankevic-wordpress-dot-com-infrastructure/'' title=''     ''>WordPress.tv: Александр Станкевич: Инфраструктура сети WordPress.com</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2013/08/25/andy-hayes-website-critiques-how-to-decide-what-works-and-what-to-ditch/'' title=''     ''>WordPress.tv: Andy Hayes: Website Critiques: How To Decide What Works And What To Ditch</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2013/08/25/zachary-brown-wordpress-devops-power-hour/'' title=''     ''>WordPress.tv: Zachary Brown: WordPress DevOps Power Hour</a></li></ul></div>', 'no'),
-(145, '_site_transient_update_themes', 'O:8:"stdClass":3:{s:12:"last_checked";i:1377552070;s:7:"checked";a:5:{s:6:"gridly";s:3:"1.0";s:12:"twentyeleven";s:3:"1.6";s:9:"twentyten";s:3:"1.6";s:14:"twentythirteen";s:3:"1.0";s:12:"twentytwelve";s:3:"1.2";}s:8:"response";a:0:{}}', 'yes'),
+(145, '_site_transient_update_themes', 'O:8:"stdClass":3:{s:12:"last_checked";i:1377561673;s:7:"checked";a:5:{s:6:"gridly";s:3:"1.0";s:12:"twentyeleven";s:3:"1.6";s:9:"twentyten";s:3:"1.6";s:14:"twentythirteen";s:3:"1.0";s:12:"twentytwelve";s:3:"1.2";}s:8:"response";a:0:{}}', 'yes'),
 (147, 'theme_mods_twentythirteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1377548677;s:4:"data";a:3:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}}}}', 'yes'),
 (148, 'current_theme', 'Gridly', 'yes'),
 (149, 'theme_mods_gridly', 'a:2:{i:0;b:0;s:18:"nav_menu_locations";a:1:{s:8:"main_nav";i:2;}}', 'yes'),
@@ -272,17 +272,15 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (154, '_site_transient_poptags_40cd750bba9870f18aada2478b24840a', 'a:40:{s:6:"widget";a:3:{s:4:"name";s:6:"widget";s:4:"slug";s:6:"widget";s:5:"count";s:4:"3898";}s:4:"post";a:3:{s:4:"name";s:4:"Post";s:4:"slug";s:4:"post";s:5:"count";s:4:"2456";}s:6:"plugin";a:3:{s:4:"name";s:6:"plugin";s:4:"slug";s:6:"plugin";s:5:"count";s:4:"2344";}s:5:"admin";a:3:{s:4:"name";s:5:"admin";s:4:"slug";s:5:"admin";s:5:"count";s:4:"1930";}s:5:"posts";a:3:{s:4:"name";s:5:"posts";s:4:"slug";s:5:"posts";s:5:"count";s:4:"1856";}s:7:"sidebar";a:3:{s:4:"name";s:7:"sidebar";s:4:"slug";s:7:"sidebar";s:5:"count";s:4:"1583";}s:7:"twitter";a:3:{s:4:"name";s:7:"twitter";s:4:"slug";s:7:"twitter";s:5:"count";s:4:"1329";}s:6:"google";a:3:{s:4:"name";s:6:"google";s:4:"slug";s:6:"google";s:5:"count";s:4:"1325";}s:8:"comments";a:3:{s:4:"name";s:8:"comments";s:4:"slug";s:8:"comments";s:5:"count";s:4:"1310";}s:6:"images";a:3:{s:4:"name";s:6:"images";s:4:"slug";s:6:"images";s:5:"count";s:4:"1260";}s:4:"page";a:3:{s:4:"name";s:4:"page";s:4:"slug";s:4:"page";s:5:"count";s:4:"1225";}s:5:"image";a:3:{s:4:"name";s:5:"image";s:4:"slug";s:5:"image";s:5:"count";s:4:"1121";}s:9:"shortcode";a:3:{s:4:"name";s:9:"shortcode";s:4:"slug";s:9:"shortcode";s:5:"count";s:4:"1000";}s:8:"facebook";a:3:{s:4:"name";s:8:"Facebook";s:4:"slug";s:8:"facebook";s:5:"count";s:3:"982";}s:5:"links";a:3:{s:4:"name";s:5:"links";s:4:"slug";s:5:"links";s:5:"count";s:3:"974";}s:3:"seo";a:3:{s:4:"name";s:3:"seo";s:4:"slug";s:3:"seo";s:5:"count";s:3:"950";}s:9:"wordpress";a:3:{s:4:"name";s:9:"wordpress";s:4:"slug";s:9:"wordpress";s:5:"count";s:3:"844";}s:7:"gallery";a:3:{s:4:"name";s:7:"gallery";s:4:"slug";s:7:"gallery";s:5:"count";s:3:"821";}s:6:"social";a:3:{s:4:"name";s:6:"social";s:4:"slug";s:6:"social";s:5:"count";s:3:"780";}s:3:"rss";a:3:{s:4:"name";s:3:"rss";s:4:"slug";s:3:"rss";s:5:"count";s:3:"722";}s:7:"widgets";a:3:{s:4:"name";s:7:"widgets";s:4:"slug";s:7:"widgets";s:5:"count";s:3:"686";}s:6:"jquery";a:3:{s:4:"name";s:6:"jquery";s:4:"slug";s:6:"jquery";s:5:"count";s:3:"681";}s:5:"pages";a:3:{s:4:"name";s:5:"pages";s:4:"slug";s:5:"pages";s:5:"count";s:3:"678";}s:5:"email";a:3:{s:4:"name";s:5:"email";s:4:"slug";s:5:"email";s:5:"count";s:3:"623";}s:4:"ajax";a:3:{s:4:"name";s:4:"AJAX";s:4:"slug";s:4:"ajax";s:5:"count";s:3:"615";}s:5:"media";a:3:{s:4:"name";s:5:"media";s:4:"slug";s:5:"media";s:5:"count";s:3:"595";}s:10:"javascript";a:3:{s:4:"name";s:10:"javascript";s:4:"slug";s:10:"javascript";s:5:"count";s:3:"572";}s:5:"video";a:3:{s:4:"name";s:5:"video";s:4:"slug";s:5:"video";s:5:"count";s:3:"570";}s:10:"buddypress";a:3:{s:4:"name";s:10:"buddypress";s:4:"slug";s:10:"buddypress";s:5:"count";s:3:"541";}s:4:"feed";a:3:{s:4:"name";s:4:"feed";s:4:"slug";s:4:"feed";s:5:"count";s:3:"539";}s:7:"content";a:3:{s:4:"name";s:7:"content";s:4:"slug";s:7:"content";s:5:"count";s:3:"530";}s:5:"photo";a:3:{s:4:"name";s:5:"photo";s:4:"slug";s:5:"photo";s:5:"count";s:3:"522";}s:4:"link";a:3:{s:4:"name";s:4:"link";s:4:"slug";s:4:"link";s:5:"count";s:3:"506";}s:6:"photos";a:3:{s:4:"name";s:6:"photos";s:4:"slug";s:6:"photos";s:5:"count";s:3:"505";}s:5:"login";a:3:{s:4:"name";s:5:"login";s:4:"slug";s:5:"login";s:5:"count";s:3:"471";}s:4:"spam";a:3:{s:4:"name";s:4:"spam";s:4:"slug";s:4:"spam";s:5:"count";s:3:"458";}s:5:"stats";a:3:{s:4:"name";s:5:"stats";s:4:"slug";s:5:"stats";s:5:"count";s:3:"453";}s:8:"category";a:3:{s:4:"name";s:8:"category";s:4:"slug";s:8:"category";s:5:"count";s:3:"452";}s:7:"youtube";a:3:{s:4:"name";s:7:"youtube";s:4:"slug";s:7:"youtube";s:5:"count";s:3:"436";}s:7:"comment";a:3:{s:4:"name";s:7:"comment";s:4:"slug";s:7:"comment";s:5:"count";s:3:"432";}}', 'yes'),
 (156, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
 (161, 'category_children', 'a:0:{}', 'yes'),
-(162, '_site_transient_timeout_theme_roots', '1377553092', 'yes'),
-(163, '_site_transient_theme_roots', 'a:5:{s:6:"gridly";s:7:"/themes";s:12:"twentyeleven";s:7:"/themes";s:9:"twentyten";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";s:12:"twentytwelve";s:7:"/themes";}', 'yes'),
 (164, 'rewrite_rules', 'a:70:{s:47:"category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?category_name=$matches[1]&feed=$matches[2]";s:42:"category/(.+?)/(feed|rdf|rss|rss2|atom)/?$";s:52:"index.php?category_name=$matches[1]&feed=$matches[2]";s:35:"category/(.+?)/page/?([0-9]{1,})/?$";s:53:"index.php?category_name=$matches[1]&paged=$matches[2]";s:17:"category/(.+?)/?$";s:35:"index.php?category_name=$matches[1]";s:44:"tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?tag=$matches[1]&feed=$matches[2]";s:39:"tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?tag=$matches[1]&feed=$matches[2]";s:32:"tag/([^/]+)/page/?([0-9]{1,})/?$";s:43:"index.php?tag=$matches[1]&paged=$matches[2]";s:14:"tag/([^/]+)/?$";s:25:"index.php?tag=$matches[1]";s:45:"type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?post_format=$matches[1]&feed=$matches[2]";s:40:"type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?post_format=$matches[1]&feed=$matches[2]";s:33:"type/([^/]+)/page/?([0-9]{1,})/?$";s:51:"index.php?post_format=$matches[1]&paged=$matches[2]";s:15:"type/([^/]+)/?$";s:33:"index.php?post_format=$matches[1]";s:48:".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\\.php$";s:18:"index.php?feed=old";s:20:".*wp-app\\.php(/.*)?$";s:19:"index.php?error=403";s:18:".*wp-register.php$";s:23:"index.php?register=true";s:32:"feed/(feed|rdf|rss|rss2|atom)/?$";s:27:"index.php?&feed=$matches[1]";s:27:"(feed|rdf|rss|rss2|atom)/?$";s:27:"index.php?&feed=$matches[1]";s:20:"page/?([0-9]{1,})/?$";s:28:"index.php?&paged=$matches[1]";s:41:"comments/feed/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?&feed=$matches[1]&withcomments=1";s:36:"comments/(feed|rdf|rss|rss2|atom)/?$";s:42:"index.php?&feed=$matches[1]&withcomments=1";s:44:"search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:40:"index.php?s=$matches[1]&feed=$matches[2]";s:39:"search/(.+)/(feed|rdf|rss|rss2|atom)/?$";s:40:"index.php?s=$matches[1]&feed=$matches[2]";s:32:"search/(.+)/page/?([0-9]{1,})/?$";s:41:"index.php?s=$matches[1]&paged=$matches[2]";s:14:"search/(.+)/?$";s:23:"index.php?s=$matches[1]";s:47:"author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?author_name=$matches[1]&feed=$matches[2]";s:42:"author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:50:"index.php?author_name=$matches[1]&feed=$matches[2]";s:35:"author/([^/]+)/page/?([0-9]{1,})/?$";s:51:"index.php?author_name=$matches[1]&paged=$matches[2]";s:17:"author/([^/]+)/?$";s:33:"index.php?author_name=$matches[1]";s:69:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$";s:80:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]";s:64:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$";s:80:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]";s:57:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$";s:81:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]";s:39:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$";s:63:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]";s:56:"([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$";s:64:"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]";s:51:"([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$";s:64:"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]";s:44:"([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$";s:65:"index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]";s:26:"([0-9]{4})/([0-9]{1,2})/?$";s:47:"index.php?year=$matches[1]&monthnum=$matches[2]";s:43:"([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?year=$matches[1]&feed=$matches[2]";s:38:"([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$";s:43:"index.php?year=$matches[1]&feed=$matches[2]";s:31:"([0-9]{4})/page/?([0-9]{1,})/?$";s:44:"index.php?year=$matches[1]&paged=$matches[2]";s:13:"([0-9]{4})/?$";s:26:"index.php?year=$matches[1]";s:58:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:68:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:88:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:83:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:83:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:57:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/trackback/?$";s:85:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&tb=1";s:77:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:97:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&feed=$matches[5]";s:72:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:97:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&feed=$matches[5]";s:65:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/page/?([0-9]{1,})/?$";s:98:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&paged=$matches[5]";s:72:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/comment-page-([0-9]{1,})/?$";s:98:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&cpage=$matches[5]";s:57:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)(/[0-9]+)?/?$";s:97:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&page=$matches[5]";s:47:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:57:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:77:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:72:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:72:"[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:64:"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/comment-page-([0-9]{1,})/?$";s:81:"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&cpage=$matches[4]";s:51:"([0-9]{4})/([0-9]{1,2})/comment-page-([0-9]{1,})/?$";s:65:"index.php?year=$matches[1]&monthnum=$matches[2]&cpage=$matches[3]";s:38:"([0-9]{4})/comment-page-([0-9]{1,})/?$";s:44:"index.php?year=$matches[1]&cpage=$matches[2]";s:27:".?.+?/attachment/([^/]+)/?$";s:32:"index.php?attachment=$matches[1]";s:37:".?.+?/attachment/([^/]+)/trackback/?$";s:37:"index.php?attachment=$matches[1]&tb=1";s:57:".?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:".?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$";s:49:"index.php?attachment=$matches[1]&feed=$matches[2]";s:52:".?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$";s:50:"index.php?attachment=$matches[1]&cpage=$matches[2]";s:20:"(.?.+?)/trackback/?$";s:35:"index.php?pagename=$matches[1]&tb=1";s:40:"(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?pagename=$matches[1]&feed=$matches[2]";s:35:"(.?.+?)/(feed|rdf|rss|rss2|atom)/?$";s:47:"index.php?pagename=$matches[1]&feed=$matches[2]";s:28:"(.?.+?)/page/?([0-9]{1,})/?$";s:48:"index.php?pagename=$matches[1]&paged=$matches[2]";s:35:"(.?.+?)/comment-page-([0-9]{1,})/?$";s:48:"index.php?pagename=$matches[1]&cpage=$matches[2]";s:20:"(.?.+?)(/[0-9]+)?/?$";s:47:"index.php?pagename=$matches[1]&page=$matches[2]";}', 'yes'),
-(165, 'plugin_options', 'a:3:{s:19:"gridly_color_scheme";s:5:"light";s:17:"gridly_responsive";s:3:"yes";s:11:"gridly_logo";N;}', 'yes'),
-(166, '_transient_timeout_settings_errors', '1377551641', 'no'),
-(167, '_transient_settings_errors', 'a:1:{i:0;a:4:{s:7:"setting";s:7:"general";s:4:"code";s:16:"settings_updated";s:7:"message";s:18:"Ajustes guardados.";s:4:"type";s:7:"updated";}}', 'no');
+(165, 'plugin_options', 'a:3:{s:19:"gridly_color_scheme";s:5:"light";s:17:"gridly_responsive";s:3:"yes";s:11:"gridly_logo";s:58:"http://localhost/blog/wp-content/uploads/2013/08/logo1.png";}', 'yes'),
+(171, '_site_transient_timeout_theme_roots', '1377561781', 'yes'),
+(172, '_site_transient_theme_roots', 'a:5:{s:6:"gridly";s:7:"/themes";s:12:"twentyeleven";s:7:"/themes";s:9:"twentyten";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";s:12:"twentytwelve";s:7:"/themes";}', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_postmeta`
+-- Estructura de tabla para la tabla `wp_postmeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_postmeta` (
@@ -293,10 +291,10 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=95 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=133 ;
 
 --
--- Dumping data for table `wp_postmeta`
+-- Volcado de datos para la tabla `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -380,12 +378,22 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (88, 15, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (89, 15, '_menu_item_xfn', ''),
 (90, 15, '_menu_item_url', ''),
-(92, 1, '_thumbnail_id', '7');
+(92, 1, '_thumbnail_id', '7'),
+(95, 18, '_edit_last', '1'),
+(96, 18, '_edit_lock', '1377563577:1'),
+(99, 20, '_wp_attached_file', '2013/08/12-Assassins-Creed-3.jpg'),
+(100, 20, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:395;s:4:"file";s:32:"2013/08/12-Assassins-Creed-3.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:32:"12-Assassins-Creed-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:32:"12-Assassins-Creed-3-300x185.jpg";s:5:"width";i:300;s:6:"height";i:185;s:9:"mime-type";s:10:"image/jpeg";}s:13:"summary-image";a:4:{s:4:"file";s:32:"12-Assassins-Creed-3-310x191.jpg";s:5:"width";i:310;s:6:"height";i:191;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:10:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";}}'),
+(101, 18, '_thumbnail_id', '20'),
+(104, 21, '_edit_last', '1'),
+(105, 21, '_edit_lock', '1377563454:1'),
+(110, 23, '_wp_attached_file', '2013/08/majorleaguegaming-857850.png'),
+(111, 23, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1920;s:6:"height";i:1200;s:4:"file";s:36:"2013/08/majorleaguegaming-857850.png";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:36:"majorleaguegaming-857850-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:36:"majorleaguegaming-857850-300x187.png";s:5:"width";i:300;s:6:"height";i:187;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:37:"majorleaguegaming-857850-1024x640.png";s:5:"width";i:1024;s:6:"height";i:640;s:9:"mime-type";s:9:"image/png";}s:13:"summary-image";a:4:{s:4:"file";s:36:"majorleaguegaming-857850-310x193.png";s:5:"width";i:310;s:6:"height";i:193;s:9:"mime-type";s:9:"image/png";}s:12:"detail-image";a:4:{s:4:"file";s:36:"majorleaguegaming-857850-770x481.png";s:5:"width";i:770;s:6:"height";i:481;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:10:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";}}'),
+(112, 21, '_thumbnail_id', '23');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_posts`
+-- Estructura de tabla para la tabla `wp_posts`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_posts` (
@@ -417,10 +425,10 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
 --
--- Dumping data for table `wp_posts`
+-- Volcado de datos para la tabla `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -438,12 +446,23 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (13, 1, '2013-08-26 21:06:36', '2013-08-26 21:06:36', ' ', '', '', 'publish', 'open', 'open', '', '13', '', '', '2013-08-26 21:06:36', '2013-08-26 21:06:36', '', 0, 'http://localhost/blog/?p=13', 5, 'nav_menu_item', '', 0),
 (14, 1, '2013-08-26 21:06:36', '2013-08-26 21:06:36', ' ', '', '', 'publish', 'open', 'open', '', '14', '', '', '2013-08-26 21:06:36', '2013-08-26 21:06:36', '', 0, 'http://localhost/blog/?p=14', 6, 'nav_menu_item', '', 0),
 (15, 1, '2013-08-26 21:06:36', '2013-08-26 21:06:36', ' ', '', '', 'publish', 'open', 'open', '', '15', '', '', '2013-08-26 21:06:37', '2013-08-26 21:06:37', '', 0, 'http://localhost/blog/?p=15', 7, 'nav_menu_item', '', 0),
-(16, 1, '2013-08-26 21:22:19', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-26 21:22:19', '0000-00-00 00:00:00', '', 0, 'http://localhost/blog/?p=16', 0, 'post', '', 0);
+(16, 1, '2013-08-26 21:22:19', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-26 21:22:19', '0000-00-00 00:00:00', '', 0, 'http://localhost/blog/?p=16', 0, 'post', '', 0),
+(17, 1, '2013-08-27 00:03:57', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2013-08-27 00:03:57', '0000-00-00 00:00:00', '', 0, 'http://localhost/blog/?p=17', 0, 'post', '', 0),
+(18, 1, '2013-08-27 00:06:33', '2013-08-27 00:06:33', 'probando el post numero 1\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nYour bones don''t break, mine do. That''s clear. Your cells react to bacteria and viruses differently than mine. You don''t get sick, I do. That''s also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We''re on the same curve, just on opposite ends.\r\n\r\nMy money''s in that office, right? If she start giving me some bullshit about it ain''t there, and we got to go someplace else and get it, I''m gonna shoot you in the head then and there. Then I''m gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I''m talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?', 'post numero 1', 'Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb...', 'publish', 'open', 'open', '', 'post-numero-1', '', '', '2013-08-27 00:32:56', '2013-08-27 00:32:56', '', 0, 'http://localhost/blog/?p=18', 0, 'post', '', 0),
+(19, 1, '2013-08-27 00:06:33', '2013-08-27 00:06:33', 'probando el post numero 1\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nYour bones don''t break, mine do. That''s clear. Your cells react to bacteria and viruses differently than mine. You don''t get sick, I do. That''s also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We''re on the same curve, just on opposite ends.\r\n\r\nMy money''s in that office, right? If she start giving me some bullshit about it ain''t there, and we got to go someplace else and get it, I''m gonna shoot you in the head then and there. Then I''m gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I''m talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?', 'post numero 1', '', 'inherit', 'open', 'open', '', '18-revision-v1', '', '', '2013-08-27 00:06:33', '2013-08-27 00:06:33', '', 18, 'http://localhost/blog/2013/08/27/18-revision-v1/', 0, 'revision', '', 0),
+(20, 1, '2013-08-27 00:07:00', '2013-08-27 00:07:00', '', '12-Assassins-Creed-3', '', 'inherit', 'open', 'open', '', '12-assassins-creed-3', '', '', '2013-08-27 00:07:00', '2013-08-27 00:07:00', '', 0, 'http://localhost/blog/wp-content/uploads/2013/08/12-Assassins-Creed-3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(21, 1, '2013-08-27 00:10:15', '2013-08-27 00:10:15', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they''re actually proud of that shit.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nWell, the way they make shows is, they make one show. That show''s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they''re going to make more shows. Some pilots get picked and become television programs. Some don''t, become nothing. She starred in one of the ones that became nothing.\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.', 'post numero 2', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.....', 'publish', 'open', 'open', '', 'post-numero-2', '', '', '2013-08-27 00:32:46', '2013-08-27 00:32:46', '', 0, 'http://localhost/blog/?p=21', 0, 'post', '', 0),
+(22, 1, '2013-08-27 00:10:15', '2013-08-27 00:10:15', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they''re actually proud of that shit.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nWell, the way they make shows is, they make one show. That show''s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they''re going to make more shows. Some pilots get picked and become television programs. Some don''t, become nothing. She starred in one of the ones that became nothing.\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.', 'post numero 2', '', 'inherit', 'open', 'open', '', '21-revision-v1', '', '', '2013-08-27 00:10:15', '2013-08-27 00:10:15', '', 21, 'http://localhost/blog/2013/08/27/21-revision-v1/', 0, 'revision', '', 0),
+(23, 1, '2013-08-27 00:11:48', '2013-08-27 00:11:48', '', 'majorleaguegaming-857850', '', 'inherit', 'open', 'open', '', 'majorleaguegaming-857850', '', '', '2013-08-27 00:11:48', '2013-08-27 00:11:48', '', 0, 'http://localhost/blog/wp-content/uploads/2013/08/majorleaguegaming-857850.png', 0, 'attachment', 'image/png', 0),
+(24, 1, '2013-08-27 00:13:31', '2013-08-27 00:13:31', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they''re actually proud of that shit.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nWell, the way they make shows is, they make one show. That show''s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they''re going to make more shows. Some pilots get picked and become television programs. Some don''t, become nothing. She starred in one of the ones that became nothing.\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.', 'post numero 2', '', 'inherit', 'open', 'open', '', '21-autosave-v1', '', '', '2013-08-27 00:13:31', '2013-08-27 00:13:31', '', 21, 'http://localhost/blog/2013/08/27/21-autosave-v1/', 0, 'revision', '', 0),
+(25, 1, '2013-08-27 00:24:17', '2013-08-27 00:24:17', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they''re actually proud of that shit.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nWell, the way they make shows is, they make one show. That show''s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they''re going to make more shows. Some pilots get picked and become television programs. Some don''t, become nothing. She starred in one of the ones that became nothing.\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.', 'post numero 2', 'esto es un extracto', 'inherit', 'open', 'open', '', '21-revision-v1', '', '', '2013-08-27 00:24:17', '2013-08-27 00:24:17', '', 21, 'http://localhost/blog/2013/08/27/21-revision-v1/', 0, 'revision', '', 0),
+(26, 1, '2013-08-27 00:24:44', '2013-08-27 00:24:44', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they''re actually proud of that shit.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nWell, the way they make shows is, they make one show. That show''s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they''re going to make more shows. Some pilots get picked and become television programs. Some don''t, become nothing. She starred in one of the ones that became nothing.\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.', 'post numero 2', 'Now that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.....', 'inherit', 'open', 'open', '', '21-revision-v1', '', '', '2013-08-27 00:24:44', '2013-08-27 00:24:44', '', 21, 'http://localhost/blog/2013/08/27/21-revision-v1/', 0, 'revision', '', 0),
+(27, 1, '2013-08-27 00:26:32', '2013-08-27 00:26:32', 'probando el post numero 1\r\n\r\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb.\r\n\r\nNow that we know who you are, I know who I am. I''m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain''s going to be? He''s the exact opposite of the hero. And most times they''re friends, like you and me! I should''ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.\r\n\r\nYour bones don''t break, mine do. That''s clear. Your cells react to bacteria and viruses differently than mine. You don''t get sick, I do. That''s also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We''re on the same curve, just on opposite ends.\r\n\r\nMy money''s in that office, right? If she start giving me some bullshit about it ain''t there, and we got to go someplace else and get it, I''m gonna shoot you in the head then and there. Then I''m gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I''m talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?', 'post numero 1', 'Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that''s what you see at a toy store. And you must think you''re in a toy store, because you''re here shopping for an infant named Jeb...', 'inherit', 'open', 'open', '', '18-revision-v1', '', '', '2013-08-27 00:26:32', '2013-08-27 00:26:32', '', 18, 'http://localhost/blog/2013/08/27/18-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_terms`
+-- Estructura de tabla para la tabla `wp_terms`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_terms` (
@@ -457,7 +476,7 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `wp_terms`
+-- Volcado de datos para la tabla `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -472,7 +491,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_term_relationships`
+-- Estructura de tabla para la tabla `wp_term_relationships`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
@@ -484,7 +503,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `wp_term_relationships`
+-- Volcado de datos para la tabla `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -496,12 +515,16 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (12, 2, 0),
 (13, 2, 0),
 (14, 2, 0),
-(15, 2, 0);
+(15, 2, 0),
+(18, 4, 0),
+(18, 7, 0),
+(21, 4, 0),
+(21, 7, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_term_taxonomy`
+-- Estructura de tabla para la tabla `wp_term_taxonomy`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
@@ -517,22 +540,22 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `wp_term_taxonomy`
+-- Volcado de datos para la tabla `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 1),
 (2, 2, 'nav_menu', '', 0, 7),
 (3, 3, 'category', '', 0, 0),
-(4, 4, 'category', '', 0, 0),
+(4, 4, 'category', '', 0, 2),
 (5, 5, 'category', '', 0, 0),
 (6, 6, 'category', '', 0, 0),
-(7, 7, 'post_tag', '', 0, 1);
+(7, 7, 'post_tag', '', 0, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_usermeta`
+-- Estructura de tabla para la tabla `wp_usermeta`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_usermeta` (
@@ -543,10 +566,10 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
--- Dumping data for table `wp_usermeta`
+-- Volcado de datos para la tabla `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -566,14 +589,16 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (14, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (15, 1, 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";}'),
 (16, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";i:2;s:15:"add-post_format";}'),
-(17, 1, 'wp_user-settings', 'libraryContent=browse'),
-(18, 1, 'wp_user-settings-time', '1377549081'),
-(19, 1, 'nav_menu_recently_edited', '2');
+(17, 1, 'wp_user-settings', 'libraryContent=browse&editor=tinymce&hidetb=0'),
+(18, 1, 'wp_user-settings-time', '1377562581'),
+(19, 1, 'nav_menu_recently_edited', '2'),
+(20, 1, 'closedpostboxes_post', 'a:0:{}'),
+(21, 1, 'metaboxhidden_post', 'a:7:{i:0;s:12:"revisionsdiv";i:1;s:13:"trackbacksdiv";i:2;s:10:"postcustom";i:3;s:16:"commentstatusdiv";i:4;s:11:"commentsdiv";i:5;s:7:"slugdiv";i:6;s:9:"authordiv";}');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_users`
+-- Estructura de tabla para la tabla `wp_users`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_users` (
@@ -593,7 +618,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `wp_users`
+-- Volcado de datos para la tabla `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
